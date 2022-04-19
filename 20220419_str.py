@@ -78,3 +78,14 @@ print(ip_list_str)
 name_list_str = ' | '.join(name_list)
 print(name_list_str)
 print(", ".join(name_list))
+
+
+# format
+s = 'name :  {}, number : {}, soccer : {}'
+print(s.format('손흥민', 7, True)) # 중괄호 안에 넣어짐
+s = 'name :  {1}, number : {2}, soccer : {0}'
+print(s.format('손흥민', 7, True)) # parameter가 바뀜
+s = 'name :  {name}, number : {n}, soccer : {s}'
+print(s.format(name = '손흥민', n = 7, s = True)) # 순서가 바뀌어도 됨
+
+#p.46 연습
