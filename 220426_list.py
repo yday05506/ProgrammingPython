@@ -53,7 +53,7 @@ player[6] = 16
 print(player)
 
 #삭제
-del player[2]   #인덱싱으로 지우기
+del player[2]   #인덱스로 지우기
 print(player)
 player.remove(30)   #값으로 지우기
 print(player)
