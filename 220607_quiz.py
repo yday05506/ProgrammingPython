@@ -7,17 +7,20 @@ print('-' * 20)
 # 2. 학번 -> 학년, 반. 학과, 번호 출력하기
 student_number = '2108'
 # >> 2학년 1반 뉴미디어소프트웨어과 08번
-major = ' '
-if (student_number[1:2] == '1') | (student_number[1:2] == '2'):
+if (student_number[1] == '1') | (student_number[1] == '2'):
     major = '뉴미디어소프트웨어과'
-elif (student_number[1:2] == '3') | (student_number[1:2] == '4'):
+elif (student_number[1] == '3') | (student_number[1] == '4'):
     major = '뉴미디어웹솔루션과'
-elif (student_number[1:2] == '5') | (student_number[1:2] == '6'):
+elif (student_number[1] == '5') | (student_number[1] == '6'):
     major = '뉴미디어디자인과'
-print(f'{student_number[0:1]}학년 {student_number[1:2]}반 {major} {student_number[2:5]}번')
+print(f'{student_number[0]}학년 {student_number[1]}반 {major} {student_number[2:]}번')
 # >> 2학년 1반 뉴미디어소프트웨어과 8번
-print(f'{student_number[0:1]}학년 {student_number[1:2]}반 {major} {student_number[3:5]}번')
+print(f'{student_number[0]}학년 {student_number[1]}반 {major} {int(student_number[2:])}번')
 # >> if문 안 쓰고
+majors = ['뉴미디어소프트웨어과', '뉴미디어소프트웨어과', '뉴미디어웹솔루션과','뉴미디어웹솔루션과', '뉴미디어디자인과', '뉴미디어디자인과']
+index = int(student_number[1])
+major = majors[index-1]
+print(f'{student_number[0]}학년 {student_number[1]}반 {major} {int(student_number[2:])}번')
 print('-' * 20)
 
 
