@@ -25,6 +25,34 @@ print('-' * 20)
 
 
 # 3. 10자리 숫자보다 작은 숫자를 넣으면 각 자리의 숫자의 합계를 출력
+number = 331
+n1 = int(number % 1000 / 100)
+n2 = int(number % 100 / 10)
+n3 = int(number % 10)
+print(n1 + n2 + n3)
+# >> 7
+number = 523523
+sum_val = 0
+while True: #while number != 0
+    if number == 0:
+        break
+    sum_val += number % 10
+    number = number // 10
+print(sum_val)
+# >> 20
+# 나머지 = number % 10   # 3
+# number = number // 10   #523523 -> 52352
+# 나머지 = number % 10   # 2
+# number = number // 10   #523523 -> 5235
+# 나머지 = number % 10   # 5
+# number = number // 10   #523523 -> 523
+# 나머지 = number % 10   # 3
+# number = number // 10   #523523 -> 52
+# 나머지 = number % 10   # 2
+# number = number // 10   #523523 -> 5
+# 나머지 = number % 10   # 5
+# number = number // 10   #523523 -> 0
+print('-' * 20)
 
 
 # 4. 1~100까지 369 게임을 출력
