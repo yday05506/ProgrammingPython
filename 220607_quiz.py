@@ -84,6 +84,6 @@ for i in range(1, 101):
         if (ii == '3') | (ii == '6') | (ii == '9'):
             cnt += 1
         if cnt == 0:
-            print(ii, end=' ')
+            print(ii, end = ' ')
         else:
             print(cnt*"짝", end=' ')
