@@ -80,10 +80,10 @@ print('-' * 20)
 for i in range(1, 101):
     s = str(i)
     cnt = 0
-    for ii in s:
-        if (ii == '3') | (ii == '6') | (ii == '9'):
-            cnt += 1
-        if cnt == 0:
-            print(ii, end = ' ')
-        else:
-            print(cnt*"짝", end=' ')
+    cnt += s.count('3')
+    cnt += s.count('6')
+    cnt += s.count('9')
+    if cnt == 0:
+        print(i, end = ' ')
+    else:
+        print(cnt*"짝", end=' ')
