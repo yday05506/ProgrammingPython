@@ -69,3 +69,9 @@ def my_print6(name, *args):   # args 자료형은 tuple
 my_print6('안유진', 20, '아이브', '러브다이브')
 
 print('-' * 20)
+
+# def my_print7(name, age = 20, group):   #기본 값 있는 파라미터 뒤에는 무조건 기본 값 있는 파라미터
+#     print(name + ": " + str(age) + "살입니다." + group + " 소속입니다.")   #이름 : 살입니다.
+#     print(name, ":", age, "살입니다.", group, "소속입니다.")   #이름 : 살입니다.
+#     print(f'{name} : {age}살입니다. {group} 소속입니다.')
+# print(my_print7('안유진', group = '아이브'))   # 위치 인자는 무조건 키워드 인자 앞에 있어야 함
