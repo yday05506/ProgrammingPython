@@ -75,3 +75,16 @@ print('-' * 20)
 #     print(name, ":", age, "살입니다.", group, "소속입니다.")   #이름 : 살입니다.
 #     print(f'{name} : {age}살입니다. {group} 소속입니다.')
 # print(my_print7('안유진', group = '아이브'))   # 위치 인자는 무조건 키워드 인자 앞에 있어야 함
+
+
+# gugudan() : 구구단 2단 출력하자
+def gugudan():
+    dan = 2
+    for n in range(1, 9 + 1):   # 1 <= n <= 9
+        print(f'{dan} x {n} = {dan*n}')
+gugudan()
+# gugudan(5) : 구구단 5단 출력하자
+def gugudan1(dan):
+    for n in range(1, 9 + 1):   # 1 <= n <= 9
+        print(f'{dan} x {n} = {dan*n}')
+gugudan1(5)
