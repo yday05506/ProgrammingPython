@@ -88,3 +88,72 @@ def gugudan1(dan):
     for n in range(1, 9 + 1):   # 1 <= n <= 9
         print(f'{dan} x {n} = {dan*n}')
 gugudan1(5)
+
+print('-' * 20)
+
+def say(name, msg = '안녕하세요', feeling = '🐶🍮'):
+    print(f'{name}, {msg} {feeling}')
+say('가현')
+say('가현', feeling='🐶🍮🐶🍮')
+
+print('-' * 20)
+
+# 문제 안 냄
+def fn(a, b=[]):
+    b.append(a)
+    print(b)
+fn(3)   # [3]
+fn(5)   # [5] : x, [3, 5] : o
+fn(10, [1]) # [1, 10]
+fn(7)   # [3, 5, 7]
+
+print('-' * 20)
+
+say('현진', '미안해')
+
+print('-' * 20)
+
+# 지금부터 20년 후의 내 나이 리턴
+def plus20 (age):
+    # print(age+20)
+    return age + 20
+a = plus20(18)  # 38
+print(a)    # None : plus20() return 값이 없어서 None 리턴
+
+print('-' * 20)
+
+# 전화번호 앞 자리(지역번호)와 맨 뒤 네 자리 출력
+def tel(number):
+    index = number.find('-')
+    f = number[:index]
+    b = number[-4:]
+    return f, b
+# front = '010'
+# back = '5678'
+front, back = tel('010-1234-5678')
+print(f'앞 : {front}, 뒤 : {back}')
+
+print('-' * 20)
+
+def min_max(리스트):
+    # max_value = 리스트[0]
+    # min_value = 리스트[0]
+    # for i in range(1, 6):
+    #     if max_value > 리스트[i]:
+    #         max_value = 리스트[i]
+    #     if min_value < 리스트[i]:
+    #         min_value = 리스트[i]
+    # return max_value, min_value
+
+    # return max(리스트), min(리스트 )
+
+    min_v = 리스트[0]
+    max_v = 리스트[0]
+    for n in 리스트 :
+        if min_v > n :
+            min_v = n
+        if max_v < n :
+            max_v = n
+    return min_v, max_v
+min_value, max_value = min_max([3, 31, 1, 6, 5, -6])
+print(f'최소 : {min_value}\t 최대 : {max_value}')
