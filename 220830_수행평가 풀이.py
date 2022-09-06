@@ -35,3 +35,29 @@ def encrypt(word):
             result += char
     return result
 print(encrypt('ive'))
+print('----------')
+
+
+# 3. 십진수를 2진수로 바꾸시오.
+def dec_to_bin(number):
+    # return bin(number)[2:]
+    # return bin(number).replace('0b', '')
+    # share : 몫, number : 나머지
+    s = ''
+    # 무한 반복
+    while True:
+        # number가 0이면 끝내고 결과 리턴
+        if number == 0:
+            return s
+        # 아니면 number를 2로 나눈 나머지를 앞으로 보관 s = '1' + s
+        else:
+            reminder = number % 2
+            s = str(reminder) + s
+            # number는 number를 2로 나눈 몫으로 설정
+            number = number // 2
+
+print(dec_to_bin(10))   #1010
+print(dec_to_bin(2))   #10
+print(dec_to_bin(77))   #1001101
+print(dec_to_bin(1024))   #10000000000
+print('----------')
