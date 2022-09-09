@@ -5,6 +5,15 @@
 #             arg += arg
 # result = sum_odd('01012345678')
 # print(result)
+def sum_odd(phone_number):
+    sum_value = 0
+    for number in phone_number:
+        number = int(number)
+        if number % 2 != 0:
+            sum_value += number
+    print(sum_value)
+sum_odd('01088792517')
+print('----------')
 
 #2
 # def encrypt(word):

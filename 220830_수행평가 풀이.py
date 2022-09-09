@@ -61,3 +61,9 @@ print(dec_to_bin(2))   #10
 print(dec_to_bin(77))   #1001101
 print(dec_to_bin(1024))   #10000000000
 print('----------')
+
+
+# 4. 이니셜 abbreviate
+print(abbreviate('Maverick'))   # M.
+print(abbreviate('HAE CHAN'))   # H. C.
+print(abbreviate('jin young park'))   # J. Y. P.
