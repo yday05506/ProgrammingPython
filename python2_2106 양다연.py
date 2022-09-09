@@ -21,6 +21,19 @@ print('----------')
 #         if w == 'a' or w == 'e' or w == 'i' or w == 'o' or w == 'u' :
 #             w = '*'
 # print(encrypt('ive'))
+def encrypt(word):
+    result = ''
+    for char in word:
+        if char == 'a' or char == 'e' or char == 'i' or char == 'o' or char == 'u' or char == 'A' or char == 'E' or char == 'I' or char == 'o' or char == 'U':
+            char = '*'
+            result += char
+        else:
+            result += char
+    return result
+print(encrypt('ive'))
+print(encrypt('nct dream'))
+print(encrypt('AEiou'))
+print('----------')
 
 #3
 
