@@ -64,6 +64,26 @@ print('----------')
 
 
 # 4. 이니셜 abbreviate
+def abbreviate(name):
+    name = name.strip()
+    # 한 글자씩 꺼내기(반복문)
+    for index, spell in enumerate(name):
+        # 첫 번째 글자 -> 대문자 -> 저장
+        if index == 0:
+            result = spell.upper() + '. '
+        # 띄어쓰기 -> 한 칸 뒤에 있는 글자 -> 대문자 -> 저장
+        if spell == ' ':
+            result += name[index + 1].upper() + '. '
+    return result.strip()
 print(abbreviate('Maverick'))   # M.
 print(abbreviate('HAE CHAN'))   # H. C.
 print(abbreviate('jin young park'))   # J. Y. P.
+
+
+def abbreviate2(name):
+    result = '. '.join([word[0].upper() for word in name.split()])   # 단어를 잘라서 list에 넣어줌
+    return result + '.'
+# print(abbreviate2('Maverick'))   # M.
+# print(abbreviate2('HAE CHAN'))   # H. C.
+print(abbreviate2('jin young park'))   # J. Y. P.
+
