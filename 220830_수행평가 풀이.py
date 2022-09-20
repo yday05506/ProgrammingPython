@@ -103,3 +103,6 @@ print(fare_pc(10))
 print(fare_pc(30))
 print(fare_pc(60))
 print(fare_pc(62))
+
+
+# 6. 키(cm)와 몸무게(kg)를 입력 받아 비만정도와 BMI 지수를 리턴
