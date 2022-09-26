@@ -27,7 +27,7 @@ class RaceCar(Car):
         self.speed = speed
 
     def __str__(self):
-        return f'{super().__str__()} \t 속력 : {self.speed}km/h'
+        return f'{super().__str__()} \t 최고 시속 : {self.speed}km/h'
 
 F1 = RaceCar('F1')
 F1.set_color('Red')
