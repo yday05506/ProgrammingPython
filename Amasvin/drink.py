@@ -36,14 +36,24 @@ class Drink :
         cup_size = input('컵사이즈를 선택하세요: ')   # input으로 넣으면 숫자를 넣더라도 문자열로 받아들임
         if cup_size == '':  # 엔터 치면 기본값
             self.cup_size = 0
-        else :
+        else:
             self.cup_size = int(cup_size)-1 # 숫자를 제대로 입력했을 때
         #self.cup_size가 점보(2)일 때, 가격 +500원
         if self.cup_size == 1:
             self.price += 500
 
+    def set_sugar(self):
+        for index, sugar_label in enumerate(Drink._SUGARS):
+            print(f'{index+1}.{sugar_label}')
+        sugar = input('당도를 선택하세요: ')
+        if sugar == '':
+            self.sugar = 1
+        else:
+            self.sugar = int(sugar)-1
+
 
 
 음료1 = Drink("아메리카노", 1800)
 음료1.set_cup_size()
+음료1.set_sugar()
 print(음료1)
