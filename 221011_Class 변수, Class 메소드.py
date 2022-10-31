@@ -87,6 +87,7 @@ print(len(동아리1.members))
 # __len__(self) : len(객체)할 때 무엇을 리턴할 지 재정의
 print('__len__()')
 print(len(동아리1))
+
 # __getitem__(self, key) : 객체[key] 재정의
 print('__getitem--()')
 print(학생1)
@@ -96,4 +97,3 @@ print(학생1['학년'])
 print('__del__()')
 print(동아리1)
 del(동아리1)
-print(동아리1)
