@@ -68,9 +68,10 @@ class Drink :
         self.set_sugar()
         self.set_ice()
 
-음료1 = Drink("아메리카노", 1800)
-# 음료1.set_cup_size()
-# 음료1.set_sugar()
-# 음료1.set_ice()
-음료1.order()
-print(음료1)
+if __name__ == '__main__':  # 시험 문제 100% 낼 거임
+    음료1 = Drink("아메리카노", 1800)
+    # 음료1.set_cup_size()
+    # 음료1.set_sugar()
+    # 음료1.set_ice()
+    음료1.order()
+    print(음료1)
