@@ -31,7 +31,7 @@ class Bubbletea(Drink):
         # 내 set_pearl() 호출
         self.set_pearl()
 
-
-버블티1 = Bubbletea('타로버블티', 3700)
-버블티1.order()
-print(버블티1)
+if __name__ == '__main__':  # *****
+    버블티1 = Bubbletea('타로버블티', 3700)
+    버블티1.order()
+    print(버블티1)
