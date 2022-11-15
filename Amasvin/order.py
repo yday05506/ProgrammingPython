@@ -9,8 +9,9 @@ class Order:
         self.init_menu()    # 메뉴판 초기화
         self.order_menu = []    # 주문한 음료수 리스트
     def __str__(self):
-        # 주문한 음료수 리스트에서 음료수 하나씩 출력
+        # self.order_menu에서 drnk 하나씩 꺼내서 출력
         # 총 주문 금액 출력
+        return '\n'.join(str(drink) for drink in self.order_menu)
     
     # 메뉴판 초기화
     def init_menu(self):
