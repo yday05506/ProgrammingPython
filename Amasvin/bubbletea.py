@@ -1,7 +1,7 @@
 from drink import Drink # 나와 같은 폴더에 있는 drink.py 파일에서 Drink 가져오기
 
 
-class Bubbletea(Drink):
+class BubbleTea(Drink):
     # 클래스 변수
     _PEARLS = ('타피오카', '코코', '알로에', '곤약')
     def __init__(self, name, price):
@@ -9,11 +9,11 @@ class Bubbletea(Drink):
         self.pearl = 0  # 0:타피오카, 1:코코, 2:알로에, 3:곤약
         pass
     def __str__(self):
-        return super().__str__() + f'\t펄 : {Bubbletea._PEARLS[self.pearl]}펄'
+        return super().__str__() + f'\t펄 : {BubbleTea._PEARLS[self.pearl]}펄'
 
     def set_pearl(self):
         # 옵션 보여주기 1. 30%, 2. 50%...
-        for index, pearl_label in enumerate(Bubbletea._PEARLS):
+        for index, pearl_label in enumerate(BubbleTea._PEARLS):
             print(f'{index + 1}.{pearl_label}펄')    # 1. 타피오카펄, ...
         # 사용자 입력 받기
         pearl = input('펄을 선택하세요: ')
@@ -32,6 +32,6 @@ class Bubbletea(Drink):
         self.set_pearl()
 
 if __name__ == '__main__':  # *****
-    버블티1 = Bubbletea('타로버블티', 3700)
+    버블티1 = BubbleTea('타로버블티', 3700)
     버블티1.order()
     print(버블티1)
