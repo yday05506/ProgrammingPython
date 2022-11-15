@@ -1,3 +1,5 @@
+from copy import copy
+
 from coffee import Coffee
 from bubbletea import BubbleTea
 
@@ -7,7 +9,8 @@ class Order:
         self.init_menu()    # 메뉴판 초기화
         self.order_menu = []    # 주문한 음료수 리스트
     def __str__(self):
-        pass
+        # 주문한 음료수 리스트에서 음료수 하나씩 출력
+        # 총 주문 금액 출력
     
     # 메뉴판 초기화
     def init_menu(self):
@@ -20,10 +23,21 @@ class Order:
     
     def order(self):
         #반복
+        while True:
             self.show_menu()  # 메뉴판 보여주기
             # 음료수 고르기(사용자 입력 받기)
+            choice = input("원하는 음료수를 고르세요(엔터 치면 끝) : ")
+            # 엔터 치면 끝
+            if choice == '':
+                break
             # 새로운 음료수로 생성, 옵션들 주문
+            new_drink = copy(self.menu[int(choice) - 1])
+                # 메뉴 그대로 가져오면, 옵션에 따라 메뉴가 바뀌어 있음
+                # 메뉴는 기본으로 놔두고, 복사해와서 그것의 옵션을 바꾸자
+            new_drink.order()
+            print(new_drink)
             # 주문한 음료수 리스트에 새로운 음료수 추가
+            self.order_menu.append(new_drink)
         # 주문한 음료수 리스트 출력
         
     def show_menu(self):
@@ -32,4 +46,5 @@ class Order:
 
 if __name__ == '__main__':
     order = Order()
-    order.show_menu()
+    order.order()
+    print(order)
