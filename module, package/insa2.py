@@ -1,4 +1,6 @@
 import hello2
 import hello_func as h
+import gugudan as g
 
-hello_func.hello()k
+h.hello()
+guggudan.gugudan(5)
